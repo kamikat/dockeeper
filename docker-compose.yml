@@ -1,0 +1,13 @@
+daemon:
+  build: .
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ${HOME}/.docker:/root/.docker
+  environment:
+    - ZK_HOST
+    - SERVICE_ID
+    - INSTANCE_ID
+zookeeper: # setup your own zookeeper instance in production
+  image: jplock/zookeeper:3.4.7
+  ports:
+    - "2181:2181"
