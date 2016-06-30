@@ -6,7 +6,7 @@ Automatic management of container configuration with Zookeeper.
 Build
 -----
 
-    $ docker build -t 'kirisetsz/zoodocker' .
+    $ docker build -t 'kamikat/zoodocker' .
 
 Usage
 -----
@@ -20,7 +20,7 @@ Starting a daemon:
         -e ZK_HOST=<ip:port> \
         -e SERVICE_ID=<service_id> \
         --name zoodocker \
-        kirisetsz/zoodocker:latest
+        kamikat/zoodocker:latest
 
 Zoodocker daemon should start with docker daemon automatilly, listening changes for `<service_id>` from Zookeeper.
 
@@ -48,7 +48,7 @@ Example
         -e ZK_HOST=172.17.42.1:2181 \
         -e SERVICE_ID=test \
         --name zoodocker_test \
-        kirisetsz/zoodocker:latest
+        kamikat/zoodocker:latest
 
 Upload configuration in `test/1` to `zk:///service/test`
 (the prefix `/service` can be overriden with environment variable `SERVICE_NAMESPACE`).
