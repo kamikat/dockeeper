@@ -43,7 +43,7 @@ def on_watch_event(ev):
   global flag_change, flag_throttle
   flag_change = True
   flag_throttle = False
-  print >>stderr, ev
+  logging.debug(ev)
 
 def service_reload():
   composefile = 'docker-compose.yml'
